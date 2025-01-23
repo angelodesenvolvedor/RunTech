@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunTech 🏃‍♂️🏃‍♀️</title>
+    <link rel="shortcut icon" href="./image/corrida.png" type="image/x-icon">
+    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-500">RunTech</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#" class="text-gray-600 hover:text-blue-500">Início</a>
+                <a href="#" class="text-gray-600 hover:text-blue-500">Loja</a>
+                <a href="#" class="text-gray-600 hover:text-blue-500" id="open-cart">Carrinho</a>
+                <a href="#" class="text-gray-600 hover:text-blue-500">Contato</a>
+            </div>
+            
+            <!-- Menu Hambúrguer -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-600 hover:text-blue-500 focus:outline-none">
+                  <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                  </svg>
+                </button>
+            </div>
+             <!-- Perfil do Usuário -->
+            <div class="hidden md:flex">
+              <button id="open-profile" class="text-gray-600 hover:text-blue-500 focus:outline-none">
+                  Perfil
+              </button>
+             </div>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+          <div class="container mx-auto px-4 flex flex-col space-y-2">
+             <a href="#" class="text-gray-600 hover:text-blue-500 block py-2">Início</a>
+            <a href="#" class="text-gray-600 hover:text-blue-500 block py-2">Loja</a>
+            <a href="#" class="text-gray-600 hover:text-blue-500 block py-2" id="mobile-open-cart">Carrinho</a>
+            <a href="#" class="text-gray-600 hover:text-blue-500 block py-2">Contato</a>
+            <button id="mobile-open-profile" class="text-gray-600 hover:text-blue-500 block py-2">Perfil</button>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-500 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Bem-vindo à RunTech</h1>
+            <p class="mt-4 text-lg">Encontre os melhores produtos pelos melhores preços!</p>
+            <a href="#products" class="mt-6 inline-block bg-white text-blue-500 py-2 px-6 rounded-full shadow-lg hover:bg-gray-100">Compre Agora</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Nossos Produtos</h2>
+            <!-- Promoção -->
+            <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-6 text-center">
+              Promoção imperdível! Compre agora e ganhe 10% de desconto.
+            </div>
+
+            <!-- Categorias -->
+            <div class="flex justify-center space-x-4 mb-8 overflow-x-auto">
+                <button class="category-btn bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 mb-2 whitespace-nowrap flex-shrink-0" data-category="todos">Todos</button>
+                <button class="category-btn bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 mb-2 whitespace-nowrap flex-shrink-0" data-category="relogios">Relógios</button>
+                <button class="category-btn bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 mb-2 whitespace-nowrap flex-shrink-0" data-category="fones">Fones de Ouvido</button>
+                <button class="category-btn bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 mb-2 whitespace-nowrap flex-shrink-0" data-category="cintos">Cintos de Hidratação</button>
+                <button class="category-btn bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 mb-2 whitespace-nowrap flex-shrink-0" data-category="viseiras">Viseiras e Bonés</button>
+            </div>
+
+            <!-- Lista de Produtos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="product-list">
+                <!-- Product Card Relógio GPS -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden product-card" data-category="relogios">
+                    <img src="./image/Relógio GPS.png" alt="Imagem do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Relógio GPS</h3>
+                        <p class="text-gray-600 mt-2">R$199,99</p>
+                        <p class="text-gray-600 mt-2 text-sm product-description" style="display:none">Relógio com GPS integrado para monitoramento de suas corridas. Bateria de longa duração e resistente a água</p>
+                        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 add-to-cart-btn" data-product-name="Relógio GPS" data-product-price="199.99" data-product-description="Relógio com GPS integrado para monitoramento de suas corridas. Bateria de longa duração e resistente a água">Adicionar ao Carrinho</button>
+                        <button class="mt-2 bg-gray-300 text-gray-700 py-1 px-3 rounded hover:bg-gray-400 show-description-btn">Ver Mais</button>
+                    </div>
+                </div>
+
+                <!-- Product Card Fone de Ouvido Bluetooth -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden product-card" data-category="fones">
+                    <img src="./image/Fone Sem Fio .png" alt="Imagem do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Fone de Ouvido</h3>
+                        <p class="text-gray-600 mt-2">R$79,99</p>
+                        <p class="text-gray-600 mt-2 text-sm product-description" style="display:none">Fone de ouvido sem fio com excelente qualidade de som e bateria de longa duração. Ideal para suas corridas.</p>
+                        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 add-to-cart-btn"  data-product-name="Fone de Ouvido Bluetooth" data-product-price="79.99" data-product-description="Fone de ouvido sem fio com excelente qualidade de som e bateria de longa duração. Ideal para suas corridas.">Adicionar ao Carrinho</button>
+                        <button class="mt-2 bg-gray-300 text-gray-700 py-1 px-3 rounded hover:bg-gray-400 show-description-btn">Ver Mais</button>
+                    </div>
+                </div>
+
+                <!-- Product Card Cinto de Hidratação -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden product-card" data-category="cintos">
+                    <img src="./image/Cinto de Hidratação.png" alt="Imagem do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Cinto de Hidratação</h3>
+                        <p class="text-gray-600 mt-2">R$39,99</p>
+                        <p class="text-gray-600 mt-2 text-sm product-description" style="display:none">Cinto de hidratação leve e confortável com capacidade para duas garrafas de água. Ideal para corridas longas.</p>
+                        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 add-to-cart-btn"  data-product-name="Cinto de Hidratação" data-product-price="39.99" data-product-description="Cinto de hidratação leve e confortável com capacidade para duas garrafas de água. Ideal para corridas longas.">Adicionar ao Carrinho</button>
+                        <button class="mt-2 bg-gray-300 text-gray-700 py-1 px-3 rounded hover:bg-gray-400 show-description-btn">Ver Mais</button>
+                    </div>
+                </div>
+
+                <!-- Product Card Viseira -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden product-card" data-category="viseiras">
+                    <img src="./image/viseira.png" alt="Imagem do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Viseira</h3>
+                        <p class="text-gray-600 mt-2">R$29,99</p>
+                        <p class="text-gray-600 mt-2 text-sm product-description" style="display:none">Viseira leve e confortável que protege seus olhos do sol durante a corrida. Ajustável e respirável.</p>
+                        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 add-to-cart-btn" data-product-name="Viseira de Corrida" data-product-price="29.99" data-product-description="Viseira leve e confortável que protege seus olhos do sol durante a corrida. Ajustável e respirável.">Adicionar ao Carrinho</button>
+                        <button class="mt-2 bg-gray-300 text-gray-700 py-1 px-3 rounded hover:bg-gray-400 show-description-btn">Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2025 RunTech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Carrinho -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-cart">×</span>
+            <h2 class="text-2xl font-bold mb-4">Carrinho de Compras</h2>
+            <ul id="cart-items" class="mb-4">
+               <!-- Itens do carrinho serão inseridos aqui pelo JavaScript -->
+            </ul>
+            <p class="font-bold">Total: <span id="cart-total">R$0.00</span></p>
+            
+            <!-- Formulário de Checkout -->
+            <h3 class="text-xl font-bold mt-4 mb-2">Checkout</h3>
+            <form id="checkout-form">
+                <div class="mb-2">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-1">Nome Completo:</label>
+                    <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                 <div class="mb-2">
+                    <label for="address" class="block text-gray-700 text-sm font-bold mb-1">Endereço de Entrega:</label>
+                    <input type="text" id="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                 <div class="mb-2">
+                    <label for="payment" class="block text-gray-700 text-sm font-bold mb-1">Forma de Pagamento:</label>
+                    <select id="payment" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                      <option value="credit">Cartão de Crédito</option>
+                      <option value="boleto">Boleto</option>
+                      <option value="pix">PIX</option>
+                    </select>
+                </div>
+                  <button type="button" id="complete-order" class="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Finalizar Compra</button>
+            </form>
+        </div>
+    </div>
+
+        <!-- Modal de Perfil -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-profile">×</span>
+            <h2 class="text-2xl font-bold mb-4">Perfil</h2>
+            
+            <!-- Botões para Login e Cadastro -->
+            <div class="flex flex-col space-y-4">
+                <button id="open-login-modal" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Login</button>
+                <button id="open-register-modal" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Cadastrar</button>
+                <button id="open-orders-modal" class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600">Meus Pedidos</button>
+                  <button id="open-reports-modal" class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600">Relatórios</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal de Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-login">×</span>
+            <h2 class="text-2xl font-bold mb-4">Login</h2>
+            <form id="login-form">
+                <div class="mb-2">
+                    <label for="login-email" class="block text-gray-700 text-sm font-bold mb-1">Email:</label>
+                    <input type="email" id="login-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-2">
+                    <label for="login-password" class="block text-gray-700 text-sm font-bold mb-1">Senha:</label>
+                    <input type="password" id="login-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <button type="button" id="submit-login" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-register">×</span>
+            <h2 class="text-2xl font-bold mb-4">Cadastro</h2>
+             <form id="register-form">
+                <div class="mb-2">
+                    <label for="register-name" class="block text-gray-700 text-sm font-bold mb-1">Nome Completo:</label>
+                    <input type="text" id="register-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-2">
+                    <label for="register-email" class="block text-gray-700 text-sm font-bold mb-1">Email:</label>
+                    <input type="email" id="register-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-2">
+                    <label for="register-password" class="block text-gray-700 text-sm font-bold mb-1">Senha:</label>
+                    <input type="password" id="register-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <button type="button" id="submit-register" class="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+     <!-- Modal de Pedidos -->
+    <div id="orders-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-orders">×</span>
+            <h2 class="text-2xl font-bold mb-4">Meus Pedidos</h2>
+            
+             <!-- Filtro -->
+             <div class="flex justify-end mb-4">
+              <label for="order-status-filter" class="mr-2">Filtrar por status:</label>
+               <select id="order-status-filter" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                 <option value="todos">Todos</option>
+                  <option value="Processando">Processando</option>
+                   <option value="Enviado">Enviado</option>
+                   <option value="Entregue">Entregue</option>
+                    <option value="Cancelado">Cancelado</option>
+               </select>
+             </div>
+            <ul id="order-list">
+              <!-- Itens da lista de pedidos serão inseridos aqui pelo JavaScript -->
+           </ul>
+          <div id="order-details-container">
+                <!-- detalhes do pedido -->
+            </div>
+        </div>
+    </div>
+
+       <!-- Modal de Relatórios -->
+    <div id="reports-modal" class="modal">
+      <div class="modal-content">
+          <span class="close" id="close-reports">×</span>
+          <h2 class="text-2xl font-bold mb-4">Relatórios e Análises</h2>
+          <div id="reports-content">
+              <!-- Dados dos relatórios serão inseridos aqui pelo JavaScript -->
+          </div>
+      </div>
+    </div>
+</body>
+</html>
