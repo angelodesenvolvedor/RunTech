@@ -42,8 +42,8 @@ Para executar este projeto localmente, você precisará apenas de um navegador w
 
 ## 👷 Autor
 
-* **Nome do dev** - *Função realizada* - [nome_do_dev](https://github.com/link_do_Perfil)
+* **Angelo Silvano** - *Função realizada* - [nome_do_dev](https://github.com/link_do_Perfil)
 
 ## 📄 Licença
 
-- Esse projeto está sob a licença MIT license - acesse os detalhes [LICENSE.md](https://github.com/link_da_licenca).
+- Esse projeto está sob a licença MIT license - acesse os detalhes [LICENSE.md](https://github.com/angelodesenvolvedor/RunTech?tab=MIT-1-ov-file).
