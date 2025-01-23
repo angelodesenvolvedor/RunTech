@@ -1,8 +1,6 @@
-
 # **RunTech** 🏃‍♂️🏃‍♀️  
 
 Um e-commerce focado em produtos para corrida e esportes, com layout responsivo e funcionalidades essenciais para uma boa experiência de compra.  
-
 
 🔥 **Introdução**  
 
@@ -40,4 +38,12 @@ Para executar este projeto localmente, você precisará apenas de um navegador w
 - **HTML:** Estrutura da página web.  
 - **CSS:** Estilos e layout da aplicação.  
 - **Tailwind CSS:** Framework CSS utilitário para um desenvolvimento rápido e responsivo.  
-- **JavaScript:** Lógica da aplicação, manipulação do DOM e interatividade.  
+- **JavaScript:** Lógica da aplicação, manipulação do DOM e interatividade.
+
+## 👷 Autor
+
+* **Nome do dev** - *Função realizada* - [nome_do_dev](https://github.com/link_do_Perfil)
+
+## 📄 Licença
+
+- Esse projeto está sob a licença (nome da licença) - acesse os detalhes [LICENSE.md](https://github.com/link_da_licenca).
