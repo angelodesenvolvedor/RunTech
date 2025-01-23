@@ -26,7 +26,7 @@ Para executar este projeto localmente, você precisará apenas de um navegador w
 
 1. **Clone o repositório:**  
    ```bash  
-   git clone [URL do seu repositório]  
+   git clone https://github.com/angelodesenvolvedor/RunTech.git
    ```  
 2. **Navegue até o diretório do projeto:**  
    ```bash  
