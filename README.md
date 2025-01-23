@@ -42,7 +42,7 @@ Para executar este projeto localmente, você precisará apenas de um navegador w
 
 ## 👷 Autor
 
-* **Angelo Silvano** - *Função realizada* - [angelodesenvolvedor](https://github.com/angelodesenvolvedor)
+* **Angelo Silvano** - *Front-End Developer* - [angelodesenvolvedor](https://github.com/angelodesenvolvedor)
 
 ## 📄 Licença
 
